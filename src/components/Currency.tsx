@@ -18,7 +18,7 @@ const CurrencyContext = createContext<CurrencyType>({
   setCurrency: () => {},
   getCurrencySettings: () => {},
   currencyOptions: [{
-    currencySymbol: 'SOL',
+    currencySymbol: 'GNANA',
     treasuryMint: 'E6HdfEAvaY8Fz9avWHvP9iJLWhVrdvmRjvXNc2v3vzb7',
     currencyDecimals: 1,
     priceDecimals: 1,
