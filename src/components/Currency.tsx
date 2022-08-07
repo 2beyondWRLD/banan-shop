@@ -21,7 +21,7 @@ const CurrencyContext = createContext<CurrencyType>({
     currencySymbol: 'GNANA',
     treasuryMint: 'E6HdfEAvaY8Fz9avWHvP9iJLWhVrdvmRjvXNc2v3vzb7',
     currencyDecimals: 1,
-    priceDecimals: 1,
+    priceDecimals: 9,
     volumeDecimals: 1
   }],
 });
