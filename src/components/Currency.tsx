@@ -20,8 +20,8 @@ const CurrencyContext = createContext<CurrencyType>({
   currencyOptions: [{
     currencySymbol: 'GNANA',
     treasuryMint: 'E6HdfEAvaY8Fz9avWHvP9iJLWhVrdvmRjvXNc2v3vzb7',
-    currencyDecimals: 1,
-    priceDecimals: 1,
+    currencyDecimals: 9,
+    priceDecimals: 9,
     volumeDecimals: 1
   }],
 });
