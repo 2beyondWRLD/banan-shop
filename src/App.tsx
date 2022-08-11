@@ -23,16 +23,9 @@ import {
 
 import TopNav from "./components/TopNav";
 import { CurrencyProvider } from "./components/Currency";
-import Marketplace from "./views/Marketplace";
 import CustomTokenMarketplace from "./views/CustomTokenMarketplace";
-import MarketplaceWithFilter from "./views/MarketplaceWithFilter";
-import MarketplaceWithUrl from "./views/MarketplaceWithUrl";
-import MultiCurrencyMarketplace from "./views/MultiCurrencyMarketplace";
-import MultiCurrencySell from "./views/MultiCurrencySell";
 import MyCollection from "./views/MyCollection";
-import SingleOrder from "./views/SingleOrder";
-import AuctionsView from "./views/AuctionsView";
-import ActivityView from "./views/ActivityView";
+
 import { RouteName } from "./constant/routeNames";
 
 require("@solana/wallet-adapter-react-ui/styles.css");
@@ -117,16 +110,7 @@ const App = () => {
                         element={
                           <>
                             <TopNav />
-                            <Marketplace />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.marketplaceMint}
-                        element={
-                          <>
-                            <TopNav />
-                            <SingleOrder />
+                            <CustomTokenMarketplace />
                           </>
                         }
                       />
@@ -136,69 +120,6 @@ const App = () => {
                           <>
                             <TopNav />
                             <MyCollection />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.auctionsView}
-                        element={
-                          <>
-                            <TopNav />
-                            <AuctionsView />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.activityView}
-                        element={
-                          <>
-                            <TopNav />
-                            <ActivityView />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.customToken}
-                        element={
-                          <>
-                            <TopNav />
-                            <CustomTokenMarketplace />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.multipleCollection}
-                        element={
-                          <>
-                            <TopNav />
-                            <MarketplaceWithFilter />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.marketplaceWithUrl}
-                        element={
-                          <>
-                            <TopNav />
-                            <MarketplaceWithUrl />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.multipleCurrencyMarketplace}
-                        element={
-                          <>
-                            <TopNav showCurrencyToggle={true} />
-                            <MultiCurrencyMarketplace />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.multipleCurrencySell}
-                        element={
-                          <>
-                            <TopNav showCurrencyToggle={true} />
-                            <MultiCurrencySell />
                           </>
                         }
                       />

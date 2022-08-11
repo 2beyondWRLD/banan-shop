@@ -1,34 +1,17 @@
-import { useRef } from "react";
-import { CandyShop } from "@liqnft/candy-shop-sdk";
 import { Orders, Stat } from "@liqnft/candy-shop";
+import { CandyShop } from "@liqnft/candy-shop-sdk";
 import { useAnchorWallet } from "@solana/wallet-adapter-react";
-import {
-  CANDY_SHOP_CREATOR_ADDRESS,
-  CANDY_SHOP_TREASURY_MINT,
-  CANDY_SHOP_PROGRAM_ID,
-  NETWORK,
-} from "../utils/candy-shop";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
+import { useRef } from "react";
 import styled from "styled-components";
+import {
+  candyShop
+} from "../utils/candy-shop";
 
 const CustomTokenMarketplace: React.FC = () => {
   const wallet = useAnchorWallet();
 
-  const candyShopRef = useRef<CandyShop>(
-    new CandyShop({
-      candyShopCreatorAddress: CANDY_SHOP_CREATOR_ADDRESS,
-      treasuryMint: CANDY_SHOP_TREASURY_MINT,
-      candyShopProgramId: CANDY_SHOP_PROGRAM_ID,
-      env: NETWORK,
-      // pass additional settings param to configure shop display
-      settings: {
-        currencySymbol: "GNANA",
-        currencyDecimals: 9,
-        priceDecimals: 9,
-        volumeDecimals: 1,
-      },
-    })
-  );
+  const candyShopRef = useRef<CandyShop>(candyShop);
 
   return (
     <DesContainer>

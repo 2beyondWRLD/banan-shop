@@ -19,9 +19,12 @@ const candyShop = new CandyShop({
   env: NETWORK,
   settings: {
     currencyDecimals: Number(
-      process.env.REACT_APP_SPL_TOKEN_TO_MINT_DECIMALS || 9
+      process.env.REACT_APP_SPL_TOKEN_TO_MINT_DECIMALS
     ),
-    currencySymbol: process.env.REACT_APP_SPL_TOKEN_TO_MINT_NAME || "SOL",
+    currencySymbol: process.env.REACT_APP_SPL_TOKEN_TO_MINT_NAME,
+    priceDecimals: 3,
+    volumeDecimals: 1,
+    mainnetConnectionUrl: process.env.REACT_APP_SOLANA_RPC_HOST
   },
 });
 
