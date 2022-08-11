@@ -17,6 +17,7 @@ interface TopNavProps {
 
 const ROUTES = [
   { url: RouteName.home, name: "Marketplace" },
+  { url: RouteName.auctionsView, name: "Auction" },
   { url: RouteName.sell, name: "Sell" },
 ];
 
