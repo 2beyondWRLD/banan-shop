@@ -27,6 +27,7 @@ import CustomTokenMarketplace from "./views/CustomTokenMarketplace";
 import MyCollection from "./views/MyCollection";
 
 import { RouteName } from "./constant/routeNames";
+import AuctionsView from "./views/AuctionsView";
 
 require("@solana/wallet-adapter-react-ui/styles.css");
 
@@ -111,6 +112,15 @@ const App = () => {
                           <>
                             <TopNav />
                             <CustomTokenMarketplace />
+                          </>
+                        }
+                      />
+                      <Route
+                        path={RouteName.auctionsView}
+                        element={
+                          <>
+                            <TopNav />
+                            <AuctionsView />
                           </>
                         }
                       />
